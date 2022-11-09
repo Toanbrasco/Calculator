@@ -1,0 +1,126 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  width: 250px;
+  margin: 100px auto;
+  background-color: #47515B;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cal__output {
+  padding: 20px;
+}
+
+.output {
+  height: 50px;
+  border: 5px solid #646873;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #9D9D9D;
+  cursor: default;
+}
+
+.num {
+  width: calc(calc(100% / 4) - 10px);
+  height: 50px;
+  margin-left: 10px;
+  margin-top: 10px;
+  line-height: 50px;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  background-color: #A8A9AD;
+  cursor: pointer;
+}
+
+.num:hover {
+
+  background-color: #c7c8cd;
+}
+
+.num>span {
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+.num.equal {
+  width: calc(calc(100% / 2) - 10px);
+}
+
+.ac {
+  background-color: #EF4138;
+}
+
+.ac:hover {
+  background-color: #e96b64;
+}
+
+.cal {
+  background-color: #D2D3D5;
+}
+
+.cal:hover {
+  background-color: #e7e7e7;
+}
+
+.white {
+  background-color: white;
+}
+
+.cal__bottom {
+  background-color: #676D7B;
+  padding: 20px;
+}
+
+
+.key__container {
+  width: calc(100% + 10px);
+  height: 100%;
+  margin-left: -10px;
+  margin-top: -10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
