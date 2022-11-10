@@ -18,11 +18,21 @@ function App() {
                 break;
             case 'C':
                 if (value !== '0') {
-                    setValue(value.slice(0, -1))
+                    if (value === 'ERROR') {
+                        setValue('0')
+                    } else {
+                        setValue(value.slice(0, -1))
+                    }
                 }
+
                 break;
             case '=':
-                setValue(eval(value))
+                try {
+                    setValue(eval(value))
+
+                } catch (error) {
+                    setValue('ERROR')
+                }
                 break;
             case '.':
                 if (value === '0') {
@@ -35,12 +45,20 @@ function App() {
                 if (value === '0') {
                     setValue(btn.toString())
                 } else {
-                    setValue(value + btn)
+                    if (btn === '+' || btn === '-' || btn === '*' || btn === '/') {
+                        if (value[value.length - 1] !== '+' && value[value.length - 1] !== '-' && value[value.length - 1] !== '*' && value[value.length - 1] !== '/') {
+                            setValue(value + btn)
+                        } else {
+                            console.log('1')
+                        }
+                    } else {
+                        setValue(value + btn)
+                    }
                 }
                 break;
         }
     }
-    
+
     return (
         <div className="App">
             <div className="container">
